@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.main-container {
+  background-image: url(/pattern-background-desktop.svg);
+  background-color: hsl(225, 100%, 94%);
+  background-position: center top;
+  background-repeat: no-repeat;
+}

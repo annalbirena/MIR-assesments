@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 900px;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+}
+
+.text-section {
+  display: flex;
+  padding: 100px 0px;
+}
+
+.text-title,
+.text-description {
+  flex: 1;
+}
+
+.text-description h2 {
+  padding-bottom: 12px;
+  font-size: 18px;
+}
+
+.text-description p {
+  max-width: 350px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(10, 100px);
+  grid-column-gap: 48px;
+  padding-bottom: 100px;
+}
+
+.grid-item-1 {
+  /* grid-row-start, grid-column-start, grid-row-end, grid-column-end
+  */
+  grid-area: 1 / 1 / 5 / 3;
+}
+
+.grid-item-2 {
+  grid-area: 2 / 3 / 6 / 5;
+}
+
+.grid-item-3 {
+  grid-area: 1 / 5 / 5 / 7;
+}
+
+.grid-item-4 {
+  grid-area: 6 / 1 / 9 / 3;
+}
+
+.grid-item-5 {
+  grid-area: 7 / 3 / 11 / 5;
+}
+
+.grid-item-6 {
+  grid-area: 6 / 5 / 9 / 7;
+}
+
+.article {
+  display: flex;
+  width: 100%;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.job-description {
+  padding-left: 8px;
+  font-size: 12px;
+  writing-mode: vertical-lr;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px 0px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  main {
+    margin: 0px 20px;
+  }
+
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0px;
+  }
+
+  .text-description {
+    padding-top: 40px;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(16, 90px);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding-bottom: 60px;
+  }
+
+  .grid-item-1 {
+    /* grid-row-start, grid-column-start, grid-row-end, grid-column-end
+  */
+    grid-area: 1 / 1 / 5 / 2;
+  }
+
+  .grid-item-2 {
+    grid-area: 2 / 2 / 6 / 3;
+  }
+
+  .grid-item-3 {
+    grid-area: 6 / 1 / 11 / 2;
+  }
+
+  .grid-item-4 {
+    grid-area: 7 / 2 / 11 / 3;
+  }
+
+  .grid-item-5 {
+    grid-area: 11 / 1 / 16 / 2;
+  }
+
+  .grid-item-6 {
+    grid-area: 12 / 2 / 16 / 3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(16, 60px);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+  }
+}
